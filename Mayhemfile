@@ -1,0 +1,6 @@
+project: rnshah9/es-shell
+target: es-shell
+image: ghcr.io/rnshah9/playground:es-shell
+
+cmds:
+  - cmd: /repo/es @@
