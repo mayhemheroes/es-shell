@@ -1,4 +1,4 @@
-project: rnshah9/es-shell
+project: es-shell
 target: es
 
 cmds:
