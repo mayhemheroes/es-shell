@@ -2,4 +2,4 @@ project: es-shell
 target: es
 
 cmds:
-  - cmd: /repo/es @@
+  - cmd: /install/bin/es @@
