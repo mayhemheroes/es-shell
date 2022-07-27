@@ -1,0 +1,5 @@
+project: es-shell
+target: es
+
+cmds:
+  - cmd: /install/bin/es @@
