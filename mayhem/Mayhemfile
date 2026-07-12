@@ -1,0 +1,14 @@
+project: es-shell
+target: es
+
+cmds:
+  # In-process libFuzzer harness (mayhem/fuzz_es.c) over the same lexer/parser/tree
+  # code path the original `/install/bin/es @@` file-input target exercised, but
+  # WITHOUT executing shell code (parse-only) -> deterministic + SanitizerCoverage
+  # edges. Target name "es" preserved so run history is not orphaned.
+  - cmd: /mayhem/fuzz_es
+    libfuzzer: true
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/es/testsuite
